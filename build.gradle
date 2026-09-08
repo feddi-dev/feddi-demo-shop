@@ -1,0 +1,2 @@
+// Root build file intentionally minimal — each module (products, reviews, users)
+// is a standalone Spring Boot application with its own plugins/dependencies.

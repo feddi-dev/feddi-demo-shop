@@ -1,3 +1,7 @@
+directive @key(fields: FieldSelectionSet!) repeatable on OBJECT | INTERFACE
+directive @lookup on FIELD_DEFINITION
+scalar FieldSelectionSet
+
 type Query {
   review(id: ID!): Review @lookup
   productById(id: ID!): Product @lookup

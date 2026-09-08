@@ -1,0 +1,7 @@
+server:
+  port: 4003
+
+spring:
+  graphql:
+    graphiql:
+      enabled: true

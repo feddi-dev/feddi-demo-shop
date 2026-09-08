@@ -1,11 +1,21 @@
 # feddi-demo-shop
 
-Beispielprojekt zum feddi-Artikel im Java Magazin. Drei GraphQL-Subgraphs (Products, Reviews, Users), föderiert über [feddi](https://feddi.dev), das erste JVM-native GraphQL-Federation-Gateway.
+Beispielprojekt zum feddi-Artikel im Java Magazin. Drei echte, unabhängig lauffähige GraphQL-Subgraphs (Products, Reviews, Users) auf Spring Boot + Spring GraphQL, föderiert über [feddi](https://feddi.dev), das erste JVM-native GraphQL-Federation-Gateway.
 
 ## Subgraphs
 
-- `products/schema.graphqls`
-- `users/schema.graphqls`
-- `reviews/schema.graphqls` — trägt Felder zu `Product` und `User` bei
+| Subgraph | Port | Schema |
+|---|---|---|
+| `products` | 4001 | `products/src/main/resources/graphql/schema.graphqls` |
+| `reviews`  | 4002 | `reviews/src/main/resources/graphql/schema.graphqls` — trägt Felder zu `Product` und `User` bei |
+| `users`    | 4003 | `users/src/main/resources/graphql/schema.graphqls` |
 
-Setup und Composition-Schritte: siehe Artikel.
+Jeder Subgraph ist ein eigenständiger Spring-Boot-Service, lokal startbar ohne die anderen:
+
+```bash
+./gradlew :products:bootRun
+./gradlew :reviews:bootRun
+./gradlew :users:bootRun
+```
+
+Setup- und Composition-Schritte gegen das feddi Gateway: siehe Artikel.

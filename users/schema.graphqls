@@ -1,8 +1,0 @@
-type Query {
-  user(id: ID!): User @lookup
-}
-
-type User @key(fields: "id") {
-  id: ID!
-  name: String!
-}

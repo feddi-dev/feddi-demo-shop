@@ -1,0 +1,5 @@
+rootProject.name = 'feddi-demo-shop'
+
+include 'products'
+include 'reviews'
+include 'users'
