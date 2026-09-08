@@ -1,0 +1,20 @@
+type Query {
+  review(id: ID!): Review @lookup
+  productById(id: ID!): Product @lookup
+  userById(id: ID!): User @lookup
+}
+
+type Review @key(fields: "id") {
+  id: ID!
+  body: String!
+}
+
+type Product @key(fields: "id") {
+  id: ID!
+  reviews: [Review!]!
+}
+
+type User @key(fields: "id") {
+  id: ID!
+  reviews: [Review!]!
+}
