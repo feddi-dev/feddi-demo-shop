@@ -1,21 +1,41 @@
 # feddi-demo-shop
 
-Beispielprojekt zum feddi-Artikel im Java Magazin. Drei echte, unabhängig lauffähige GraphQL-Subgraphs (Products, Reviews, Users) auf Spring Boot + Spring GraphQL, föderiert über [feddi](https://feddi.dev), das erste JVM-native GraphQL-Federation-Gateway.
+Demo project accompanying an article about [feddi](https://feddi.dev), the first JVM-native GraphQL federation gateway. Three real, independently runnable GraphQL subgraphs (Products, Reviews, Users) built with Spring Boot and Spring GraphQL, federated through feddi.
 
 ## Subgraphs
 
 | Subgraph | Port | Schema |
 |---|---|---|
 | `products` | 4001 | `products/src/main/resources/graphql/schema.graphqls` |
-| `reviews`  | 4002 | `reviews/src/main/resources/graphql/schema.graphqls` — trägt Felder zu `Product` und `User` bei |
+| `reviews`  | 4002 | `reviews/src/main/resources/graphql/schema.graphqls` — contributes fields to `Product` and `User` |
 | `users`    | 4003 | `users/src/main/resources/graphql/schema.graphqls` |
 
-Jeder Subgraph ist ein eigenständiger Spring-Boot-Service, lokal startbar ohne die anderen:
+Each subgraph serves GraphiQL at `/graphiql` and a short info page at `/`.
+
+## Running the subgraphs
+
+Each subgraph is a standalone Spring Boot application — start them in three separate terminals:
 
 ```bash
 ./gradlew :products:bootRun
+```
+
+```bash
 ./gradlew :reviews:bootRun
+```
+
+```bash
 ./gradlew :users:bootRun
 ```
 
-Setup- und Composition-Schritte gegen das feddi Gateway: siehe Artikel.
+Or start all three at once in the background from a single terminal:
+
+```bash
+./gradlew :products:bootRun &
+./gradlew :reviews:bootRun &
+./gradlew :users:bootRun &
+```
+
+Stop them again with `kill %1 %2 %3`, or `jobs -l` to find their PIDs.
+
+Setup and composition steps against the feddi Gateway: see the article.
