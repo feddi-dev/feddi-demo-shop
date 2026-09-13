@@ -45,4 +45,9 @@ public class ReviewController {
                 .filter(review -> review.userId().equals(user.id()))
                 .toList();
     }
+
+    @SchemaMapping(typeName = "Review", field = "author")
+    public User author(Review review) {
+        return new User(review.userId());
+    }
 }

@@ -11,6 +11,7 @@ type Query {
 type Review @key(fields: "id") {
   id: ID!
   body: String!
+  author: User!
 }
 
 type Product @key(fields: "id") {
