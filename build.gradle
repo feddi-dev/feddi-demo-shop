@@ -1,2 +1,8 @@
 // Root build file intentionally minimal — each module (products, reviews, users)
 // is a standalone Spring Boot application with its own plugins/dependencies.
+
+tasks.register('startAll') {
+	group = 'application'
+	description = 'Starts all three subgraph services (run with --parallel, otherwise they start one after another and block)'
+	dependsOn ':products:bootRun', ':reviews:bootRun', ':users:bootRun'
+}

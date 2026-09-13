@@ -3,3 +3,8 @@ build/
 .idea/
 *.iml
 .DS_Store
+
+# Downloaded feddi Gateway distribution (see article Setup) — not source,
+# not committed, but kept locally rather than cleaned up between runs.
+/feddi-gateway.zip
+/feddi-gateway/
