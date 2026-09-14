@@ -23,3 +23,13 @@ Each subgraph is a standalone Spring Boot application. Start all three at once:
 `Ctrl+C` stops all three together. To run just one, start its `bootRun` task directly, e.g. `./gradlew :products:bootRun`.
 
 Setup and composition steps against the feddi Gateway: see the article.
+
+## feddi Gateway config
+
+`feddi-gateway.yml.sample` shows the config used for this demo: GraphiQL enabled, connected to the feddi Platform with a short poll interval so schema changes show up quickly. Copy it to `feddi-gateway/feddi-gateway.yml` and fill in your own `graph-variant-key`:
+
+```bash
+cp feddi-gateway.yml.sample feddi-gateway/feddi-gateway.yml
+```
+
+The `feddi-gateway/` directory itself (the downloaded distribution) is gitignored — see the article for how to obtain it.

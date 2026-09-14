@@ -1,0 +1,8 @@
+port: 8080
+enable-graphiql: true
+
+extensions:
+  feddi:
+    api-url: https://feddi.dev
+    graph-variant-key: fddi_gvk_your_graph_variant_key_here
+    poll-interval-seconds: 30
