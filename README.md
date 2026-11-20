@@ -78,7 +78,7 @@ The `feddi-gateway/` directory itself (the downloaded distribution) is gitignore
 feddi subgraph check <users-subgraph-id> --schema examples/breaking-change/users-schema.graphqls
 ```
 
-To reproduce the `(has usage)` output, first run the example query above through the gateway (for example in GraphiQL at http://localhost:8080/graphiql). Otherwise the check reports no usage. See `examples/breaking-change/README.md`.
+To reproduce the `(has usage)` output, first run the example query above through the gateway (for example in GraphiQL at http://localhost:8080/graphiql). The platform rolls usage up every five minutes, so wait about five minutes after the query. Until then the check reports `(no usage)`. See `examples/breaking-change/README.md`.
 
 ### In-process Java extension
 
