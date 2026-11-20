@@ -16,6 +16,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'dev.feddi:feddi-gateway-extension:2026-11-18-0811'
+    implementation 'dev.feddi:feddi-gateway-extension:latest.release'
     implementation 'org.springframework.boot:spring-boot-autoconfigure:4.0.1'
 }

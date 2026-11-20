@@ -82,7 +82,7 @@ To reproduce the `(has usage)` output, first run the example query above through
 
 ### In-process Java extension
 
-`examples/java-extension` is a `SubgraphRequestHeaderCustomizer` for the feddi Gateway that replaces the caller's `Authorization` header with an internal service token. It runs inside the gateway process, no extra service and no HTTP callback. The gateway version in its `build.gradle` must match the gateway you downloaded. See `examples/java-extension/README.md` for build and setup.
+`examples/java-extension` is a `SubgraphRequestHeaderCustomizer` for the feddi Gateway that replaces the caller's `Authorization` header with an internal service token. It runs inside the gateway process, no extra service and no HTTP callback. It builds against the latest released gateway extension. See `examples/java-extension/README.md` for build and setup.
 
 ## Support
 
