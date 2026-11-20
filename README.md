@@ -1,11 +1,11 @@
 # feddi-demo-shop
 
-Demo project accompanying an article about [feddi](https://feddi.dev), the first JVM-native GraphQL federation gateway. Three real, independently runnable GraphQL subgraphs (Products, Reviews, Users) built with Spring Boot and Spring GraphQL, federated through feddi.
+Demo project accompanying an article about [feddi](https://feddi.dev?utm_source=github_feddi_demo_shop&utm_medium=readme&utm_campaign=site_referral&utm_content=landing_page), the first JVM-native GraphQL federation gateway. Three real, independently runnable GraphQL subgraphs (Products, Reviews, Users) built with Spring Boot and Spring GraphQL, federated through feddi.
 
 ## Requirements
 
 - Java 25 for building and running the subgraphs (the Gradle build does not run on newer JDKs yet). The feddi Gateway itself runs on Java 25 or later.
-- A free account on [feddi.dev](https://feddi.dev) and the feddi CLI, see [Get Started](https://feddi.dev/get-started)
+- A free account on [feddi.dev](https://feddi.dev?utm_source=github_feddi_demo_shop&utm_medium=readme&utm_campaign=site_referral&utm_content=landing_page) and the feddi CLI, see [Get Started](https://feddi.dev/get-started?utm_source=github_feddi_demo_shop&utm_medium=readme&utm_campaign=site_referral&utm_content=get_started)
 
 ## Subgraphs
 
@@ -66,7 +66,7 @@ Each publish composes the supergraph again. Once all three are published, the ga
 cp feddi-gateway.yml.sample feddi-gateway/feddi-gateway.yml
 ```
 
-The `feddi-gateway/` directory itself (the downloaded distribution) is gitignored, get it from [feddi.dev/downloads](https://feddi.dev/downloads).
+The `feddi-gateway/` directory itself (the downloaded distribution) is gitignored, get it from [feddi.dev/downloads](https://feddi.dev/downloads?utm_source=github_feddi_demo_shop&utm_medium=readme&utm_campaign=site_referral&utm_content=downloads).
 
 ## Examples
 
