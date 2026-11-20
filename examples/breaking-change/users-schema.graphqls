@@ -1,0 +1,13 @@
+directive @key(fields: FieldSelectionSet!) repeatable on OBJECT | INTERFACE
+directive @lookup on FIELD_DEFINITION
+scalar FieldSelectionSet
+
+type Query {
+  user(id: ID!): User @lookup
+}
+
+type User @key(fields: "id") {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
